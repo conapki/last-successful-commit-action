@@ -239,7 +239,11 @@ exports.getInput = getInput;
  */
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 function setOutput(name, value) {
-    command_1.issueCommand('set-output', { name }, value);
+    const filePath = process.env['GITHUB_OUTPUT'] || '';
+    if (filePath) {
+      return file_command_1.issueFileCommand('OUTPUT', file_command_1.prepareKeyValueMessage(name, value));
+    }
+    command_1.issueCommand('set-output', { name }, utils_1.toCommandValue(value));
 }
 exports.setOutput = setOutput;
 /**
@@ -357,7 +361,11 @@ exports.group = group;
  */
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 function saveState(name, value) {
-    command_1.issueCommand('save-state', { name }, value);
+    const filePath = process.env['GITHUB_STATE'] || '';
+    if (filePath) {
+      return file_command_1.issueFileCommand('STATE', file_command_1.prepareKeyValueMessage(name, value));
+    }
+    command_1.issueCommand('save-state', { name }, utils_1.toCommandValue(value));
 }
 exports.saveState = saveState;
 /**
