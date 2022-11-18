@@ -415,6 +415,7 @@ function issueCommand(command, message) {
         encoding: 'utf8'
     });
 }
+const uuid_1 = __nccwpck_require__(8974);
 exports.prepareKeyValueMessage = exports.issueFileCommand = void 0;
 function issueFileCommand(command, message) {
     const filePath = process.env[`GITHUB_${command}`];
