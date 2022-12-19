@@ -93,80 +93,7 @@ exports.createCheckRun = createCheckRun;
 
 /***/ }),
 
-/***/ 3109:
-/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
-
-"use strict";
-
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
-    Object.defineProperty(o, "default", { enumerable: true, value: v });
-}) : function(o, v) {
-    o["default"] = v;
-});
-var __importStar = (this && this.__importStar) || function (mod) {
-    if (mod && mod.__esModule) return mod;
-    var result = {};
-    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
-    __setModuleDefault(result, mod);
-    return result;
-};
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.run = void 0;
-const core = __importStar(__nccwpck_require__(2186));
-const github_1 = __nccwpck_require__(5928);
-const utils_1 = __nccwpck_require__(918);
-/*function run() {
-    return __awaiter(this, void 0, void 0, function* () {
-        try {
-            const token = core.getInput('REPO_TOKEN');
-            const trxPath = core.getInput('TRX_PATH');
-            const ignoreTestFailures = core.getInput('IGNORE_FAILURE', { required: false }) === 'true';
-            core.info(`Finding Trx files in: ${trxPath}`);
-            const trxFiles = yield utils_1.getTrxFiles(trxPath);
-            core.info(`Processing ${trxFiles.length} trx files`);
-            const trxToJson = yield utils_1.transformAllTrxToJson(trxFiles);
-            core.info(`Checking for failing tests`);
-            const failingTestsFound = utils_1.areThereAnyFailingTests(trxToJson);
-            for (const data of trxToJson) {
-                yield github_1.createCheckRun(token, ignoreTestFailures, data);
-            }
-            if (failingTestsFound) {
-                if (ignoreTestFailures) {
-                    core.warning(`Workflow configured to ignore test failures`);
-                }
-                else {
-                    core.setFailed('At least one failing test was found');
-                }
-            }
-            core.setOutput('test-outcome', failingTestsFound ? 'Failed' : 'Passed');
-            core.setOutput('trx-files', trxFiles);
-        }
-        catch (error) {
-            core.setFailed(error.message);
-        }
-    });
-}
-exports.run = run;
-run();*/
-
-
-/***/ }),
+/***/ //3109:
 
 /***/ 2727:
 /***/ ((__unused_webpack_module, exports) => {
@@ -10221,7 +10148,7 @@ module.exports = require("zlib");;
 /******/ 	// module exports must be returned from runtime so entry inlining is disabled
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
-/******/ 	return __nccwpck_require__(3109);
+/******/ 	//return __nccwpck_require__(3109);
 /******/ })()
 ;
 //# sourceMappingURL=index.js.map
