@@ -131,7 +131,7 @@ require('./sourcemap-register.js');/******/ (() => { // webpackBootstrap
     function run() {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-    const octokit = github.getOctokit(core.getInput("github_token"));
+    const octokit = github_1.getOctokit(core.getInput("github_token"));
     const [owner, repo] = process.env.GITHUB_REPOSITORY.split("/");
     const params = {
       owner,
