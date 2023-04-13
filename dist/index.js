@@ -127,11 +127,12 @@ require('./sourcemap-register.js');/******/ (() => { // webpackBootstrap
     };
     Object.defineProperty(exports, "__esModule", ({ value: true }));
     const core = __importStar(__nccwpck_require__(2186));
-    const github_1 = __nccwpck_require__(5928);
+    //const github_1 = __nccwpck_require__(5928);
+    const github = __importStar(__nccwpck_require__(5438));
     function run() {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-    const octokit = github_1.getOctokit(core.getInput("github_token"));
+    const octokit = github.getOctokit(core.getInput("github_token"));
     const [owner, repo] = process.env.GITHUB_REPOSITORY.split("/");
     const params = {
       owner,
